@@ -270,7 +270,7 @@ const pools: PoolConfig[] = [
   poolCategory : PoolCategory.CORE,
   projectLink : 'https://pancakeswap.finance',
   harvest : true,
-  tokenPerBlock : '1', // multilier
+  tokenPerBlock : '10', // multilier
   sortOrder : 7,
   isFinished : false,
   tokenDecimals : 18,
@@ -279,6 +279,8 @@ const pools: PoolConfig[] = [
   nativeFarmId:9,
   multiplier:1,
  },
+
+ 
 //  {
 //   sousId : 999992,
 //   tokenName : 'CAKE-USDT',

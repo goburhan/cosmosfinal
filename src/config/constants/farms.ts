@@ -8,12 +8,12 @@ const farms: FarmConfig[] = [
     isTokenOnly:true,
     lpSymbol: 'RTT',
     lpAddresses: {
-      97: '0xe11E40890D1BCb52d8275B1b2193F157928897e2',
+      97: '',
       56: '0x7d2cbDB15d6B7c20c0629A5351Cd0D3624722879',
     },
     tokenSymbol: 'RTT',
     tokenAddresses: {
-      97: '0xF0ec4fF226066712db7A9Ab17b62DdD9D9a49aFb',
+      97: '',
       56: '0x8E20099b828560Ba61eAcF9dfE2584811bF4aAEB',
     },
     quoteTokenSymbol: QuoteToken.BNB,

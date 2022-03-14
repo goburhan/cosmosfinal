@@ -35,7 +35,7 @@ export const convertCakeToShares = (
   return { sharesAsNumberBalance, sharesAsBigNumber, sharesAsDisplayBalance }
 }
 
-const AUTO_VAULT_COMPOUND_FREQUENCY = 24
+const AUTO_VAULT_COMPOUND_FREQUENCY = 1
 const MANUAL_POOL_AUTO_COMPOUND_FREQUENCY = 0
 
 //  export const getAprData = (pool: DeserializedPool, performanceFee: number) => {
@@ -56,10 +56,10 @@ const MANUAL_POOL_AUTO_COMPOUND_FREQUENCY = 0
     // console.log(performanceFee)
    //  Estimate & manual for now. 288 = once every 5 mins. We can change once we have a better sense of this
     const autoCompoundFrequency = AUTO_VAULT_COMPOUND_FREQUENCY
-    const autoApr = getApy(apr, AUTO_VAULT_COMPOUND_FREQUENCY, 365, performanceFee) * 100
-    const autoApr1 = getApy(apr, AUTO_VAULT_COMPOUND_FREQUENCY, 1, performanceFee) * 100
-    const autoApr7 = getApy(apr, AUTO_VAULT_COMPOUND_FREQUENCY, 7, performanceFee) * 100
-    const autoApr30 = getApy(apr, AUTO_VAULT_COMPOUND_FREQUENCY, 30, performanceFee) * 100
+    const autoApr = getApy(apr, AUTO_VAULT_COMPOUND_FREQUENCY, 365, performanceFee) * 1
+    const autoApr1 = getApy(apr, AUTO_VAULT_COMPOUND_FREQUENCY, 1, performanceFee) * 1
+    const autoApr7 = getApy(apr, AUTO_VAULT_COMPOUND_FREQUENCY, 7, performanceFee) * 1
+    const autoApr30 = getApy(apr, AUTO_VAULT_COMPOUND_FREQUENCY, 30, performanceFee) * 1
     return { apr: autoApr, autoCompoundFrequency ,autoApr1,autoApr7,autoApr30}
 
 
@@ -67,7 +67,7 @@ const MANUAL_POOL_AUTO_COMPOUND_FREQUENCY = 0
 export const getAutoAprDataWithDay = (apr: number, performanceFee: number,day: number) => {
 
   // console.log(apr)
-  // console.log(performanceFee)
+   console.log(performanceFee)
  //  Estimate & manual for now. 288 = once every 5 mins. We can change once we have a better sense of this
   const autoCompoundFrequency = AUTO_VAULT_COMPOUND_FREQUENCY
   const autoApr = getApy(apr, AUTO_VAULT_COMPOUND_FREQUENCY, day, performanceFee) * 100

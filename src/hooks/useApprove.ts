@@ -164,17 +164,19 @@ export const useIfoApprove = (tokenContract: Contract, spenderAddress: string) =
 export const useVaultApprove = () => {
   const { account } = useWallet()
   const cakeContract = useCake()
+  const dispatch = useDispatch()
   const cakeVaultAddress = getCakeVaultAddress()
   const handleVaultApprove = useCallback(async () => {
     try {
       const tx = await cakeContract.methods
         .approve(cakeVaultAddress, ethers.constants.MaxUint256)
         .send({ from: account })
+        dispatch(fetchFarmUserDataAsync(account))
       return tx
     } catch {
       return false
     }
-  }, [account, cakeVaultAddress, cakeContract])
+  }, [account, cakeVaultAddress, cakeContract,dispatch])
 
   return {handleVaultApprove}
 }
@@ -202,6 +204,7 @@ export const useCheckVaultApprovalStatus = () => {
 }
 export const useClusterApprove = (address) => {
   const { account } = useWallet()
+  const dispatch = useDispatch()
   const cakeContract = useCake()
   const cakeClusterAddress = address
   const handleClusterApprove = useCallback(async () => {
@@ -209,11 +212,12 @@ export const useClusterApprove = (address) => {
       const tx = await cakeContract.methods
         .approve(cakeClusterAddress, ethers.constants.MaxUint256)
         .send({ from: account })
+        dispatch(fetchFarmUserDataAsync(account))
       return tx
     } catch {
       return false
     }
-  }, [account, cakeClusterAddress, cakeContract])
+  }, [account, cakeClusterAddress, cakeContract,dispatch])
 
   return {handleClusterApprove}
 }
