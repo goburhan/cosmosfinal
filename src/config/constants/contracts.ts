@@ -92,7 +92,7 @@ export default {
   },
   // autoFarm farm kontratları
   cakeVault : {
-    56 : '0x6B8065F9BCf0570Da7F7d36AAb2911F818959A17',
+    56 : '0x79eFe3cC2E2291D9570762d0a6b8Cf00B9d593df',
     97 : '0x24d4cA45A8F4aDDe5a62cC6c31011B3a56DD4cD3'
   }
 }
