@@ -43,7 +43,7 @@ const config: MenuEntry[] = [
     ]
   },
   {
-    label: 'Home',
+    label: 'Auto Farm',
     icon: 'HomeIcon',
     href: '/auto',
   },
